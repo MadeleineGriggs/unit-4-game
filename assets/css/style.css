@@ -1,0 +1,10 @@
+
+
+.items {
+    width: 30px;
+    height: 30px;
+}
+
+.colorHarmony {
+    filter: grayscale(40%) hue-rotate(195deg);
+}

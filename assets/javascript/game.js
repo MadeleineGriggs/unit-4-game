@@ -1,10 +1,12 @@
 var ingredientsArray = [
-    {"name": "Wing of Bat", "img":"ingredient1.jpg"},
-    {"name": "Tongue of Dog", "img":"ingredient2.jpg"},
-    {"name": "Demon Flesh", "img":"ingredient3.jpg"},
-    {"name": "Eye of Newt", "img":"ingredient4.jpg"},
-    {"name": "Hemlock Root", "img":"ingredient5.jpg"},
-    {"name": "Mandrake", "img":"ingredient6.jpg"},
+    {"name": "Ground Fairy Wings", "img":"potions1.png"},
+    {"name": "Soul of Lavender", "img":"potions2.png"},
+    {"name": "Snake Skin", "img":"potions3.png"},
+    {"name": "Wormwood", "img":"potions4.png"},
+    {"name": "Dead Man's Blood", "img":"potions5.png"},
+    {"name": "Billing's Root", "img":"potions6.png"},
+    {"name": "Hemlock Root", "img":"potions7.png"},
+    {"name": "Soul Snake", "img":"potions8.png"},
 ]
 
 
@@ -17,6 +19,8 @@ $(document).ready(function() {
     var item3Value = 0;
     var item4Value = 0;
     var currentUserValue = 0;
+    var wins = 0;
+    var losses = 0;
 
 // Fill in the initial game state
 //Generate a random number for the potion 
@@ -32,6 +36,7 @@ function shuffle(a) {
     return a;
 }
 
+
     function startGame() {
         randomPotion = 0;
         currentUserValue = 0;
@@ -43,7 +48,7 @@ function shuffle(a) {
         //Generate a random potion ingredient 1, assign it a random number value. 
         var item1Index = 0;
         item1Value = Math.floor((Math.random() * 25) + 1);
-        var item1Img = "./assets/images/" + ingredients[item1Index]["img"];
+        var item1Img = "./assets/images/ingredientImages/" + ingredients[item1Index]["img"];
         var item1Name = ingredients[item1Index]["name"];
         $("#ingredient-1").empty();
         $("#ingredient-1").attr("src", item1Img);
@@ -52,21 +57,21 @@ function shuffle(a) {
         //Generate a random potion ingredient 2
         var item2Index = 1;
         item2Value = Math.floor((Math.random() * 25) + 1);
-        var item2Img = "./assets/images/" + ingredients[item2Index]["img"];
+        var item2Img = "./assets/images/ingredientImages/" + ingredients[item2Index]["img"];
         var item2Name = ingredients[item2Index]["name"];
         $("#ingredient-2").attr("src", item2Img);
         $("#ingredient-2-name").html(item2Name + " " + item2Value);
         //Generate a random potion ingredient 3
         var item3Index = 2;
         item3Value = Math.floor((Math.random() * 25) + 1);
-        var item3Img = "./assets/images/" + ingredients[item3Index]["img"];
+        var item3Img = "./assets/images/ingredientImages/" + ingredients[item3Index]["img"];
         var item3Name = ingredients[item3Index]["name"];
         $("#ingredient-3").attr("src", item3Img);
         $("#ingredient-3-name").html(item3Name + " " + item3Value);
         //Generate a random potion ingredient 4
         var item4Index = 3;
         item4Value = Math.floor((Math.random() * 25) + 1);
-        var item4Img = "./assets/images/" + ingredients[item4Index]["img"];
+        var item4Img = "./assets/images/ingredientImages/" + ingredients[item4Index]["img"];
         var item4Name = ingredients[item4Index]["name"];
         $("#ingredient-4").attr("src", item4Img);
         $("#ingredient-4-name").html(item4Name + " " + item4Value);
@@ -102,12 +107,19 @@ function shuffle(a) {
         checkWin();
     }
 
+    //after the user has clicked on an item, check if they have won or lost.
     function checkWin() {
         if (currentUserValue > randomPotion) {
             console.log("You lost!");
+            potionLost = randomPotion;
+            wins++;
+            $("#loss-container").append("Potion " + potionLost +" has been ruined!");
             startGame();
         } else if (currentUserValue === randomPotion) {
             console.log("You Won!");
+            potionWon = randomPotion;
+            losses++;
+            $("#wins-container").append("I can hand in Potion " + potionWon);
             startGame();
         }
     }
