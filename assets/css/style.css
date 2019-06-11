@@ -1,26 +1,31 @@
-
+body {
+    background-color: #b2a9a6;
+}
 
 .game-container {
-    border: solid 5px black;
     display: grid;
-    margin: 1rem;
+    margin: 1rem 2rem;
     grid-template-columns: 30vw 20vw auto;
     grid-template-rows: 6rem auto;
     text-align: center;
+    background-color: #f9f5f2;
 }
 
 h1 {
     margin-top: 2rem;
     font-family: 'Homemade Apple', cursive;
     font-size: 4rem;
-    text-align: center;  
+    text-align: center;
+    color: #543D33;
 }
 .fancy-font {
  font-family: 'Homemade Apple', cursive;
+ color: #543D33;
 }
 
 .body-text {
     font-family: 'Raleway', sans-serif;
+    color: #543D33;
 }
 
 .items {
@@ -28,38 +33,9 @@ h1 {
     height: 75px;
 }
 
-#cauldron-container {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    position: relative;
-    margin-top: 1.5em;
-}
 
-.cauldronStyled {
-    filter: grayscale(40%) hue-rotate(155deg);
-    max-width: 45%;
-}
 
-#current-number {
-    z-index: 2;
-    position: absolute;
-    left: 63%;
-    top: 83%;
-    font-family: 'Homemade Apple', cursive;
-    font-size: 3rem;
-    color: white;
-}
-
-#current-number-title {
-    z-index: 2;
-    position: absolute;
-    left: 59%;
-    top: 77%;
-    font-size: 1.5rem;
-    color: white;
-}
+/* Styling relating to the image of the classroom with the teacher */
 
 .teacherImage {
     filter: grayscale(40%);
@@ -113,13 +89,17 @@ h1 {
     grid-row-end: 3;
 }
 
+/* Styling relating to the instructions and the score keeping sections */
+
 .instructions-and-score {
-    border: 1px solid black;
+    border-right: 1px solid black;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
 }
+
+/* Styling relating to the 4 ingredients displayed */
 
 #ingredients-container {
     grid-column-start: 3;
@@ -133,4 +113,40 @@ h1 {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 4rem;
+}
+
+
+/* Styling relating to the cauldron where the current user value is displayed */
+
+#cauldron-container {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    position: relative;
+    margin-top: 1.5em;
+}
+
+.cauldronStyled {
+    filter: grayscale(40%) hue-rotate(155deg);
+    max-width: 43%;
+}
+
+#current-number {
+    z-index: 2;
+    position: absolute;
+    left: 47%;
+    top: 65%;
+    font-family: 'Homemade Apple', cursive;
+    font-size: 3rem;
+    color: white;
+}
+
+#current-number-title {
+    z-index: 2;
+    position: absolute;
+    left: 38%;
+    top: 57%;
+    font-size: 1.5rem;
+    color: white;
 }
