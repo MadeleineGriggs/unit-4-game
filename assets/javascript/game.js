@@ -7,6 +7,17 @@ var ingredientsArray = [
     {"name": "Billing's Root", "img":"potions6.png"},
     {"name": "Hemlock Root", "img":"potions7.png"},
     {"name": "Soul Snake", "img":"potions8.png"},
+    {"name": "Coin from a Dead Man's Eye", "img":"items2.png"},
+    {"name": "Danake of Charon", "img":"items3.png"},
+    {"name": "Cursed Lucky Clover", "img":"items8.png"}
+]
+
+var teacherSays = [
+    "Let's make this potion today... ",
+    "I think we need to practice, turn to page 175 for... ",
+    "Okay class, we are going to make this potion... ",
+    "Now we're going to do a more advanced potion today... ",
+    "How about we try making this... "
 ]
 
 
@@ -41,9 +52,11 @@ function shuffle(a) {
         randomPotion = 0;
         currentUserValue = 0;
         var ingredients = shuffle(ingredientsArray);
+        var teacherSaysWhat = shuffle(teacherSays);
+        $("#current-number").html(0);
         randomPotion = Math.floor((Math.random() * 100) + 1);
         $("#random-potion").empty();
-        $("#random-potion").html("The Potion I want is # " + randomPotion);
+        $("#random-potion").html(teacherSaysWhat[0] + "Potion # " + randomPotion);
         console.log(randomPotion);
         //Generate a random potion ingredient 1, assign it a random number value. 
         var item1Index = 0;
@@ -103,6 +116,8 @@ function shuffle(a) {
     function addIngredients (value) {
         var newValue = value + currentUserValue;
         currentUserValue = newValue;
+        $("#current-number").empty();
+        $("#current-number").html(currentUserValue);
         console.log(currentUserValue);
         checkWin();
     }

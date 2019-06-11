@@ -6,38 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="screen" />
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Raleway&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
 <h1>Potion Mixer</h1>
-<p>How to play the game:
-    <ul>
-        <li>Try to add the potion ingredients up to the number of potion.</li>
-        <li>The values of the potion ingredients change each game.</li>
-    </ul>
-</p>
-<div class="game-container">
-    <div id="random-potion">The potion I want is ...</div>
-    <p id="current-number">The current number I have is...</p>
-    <div id="wins-container">
-        <p>Successful potions...</p>
-    </div>
-    <div id="loss-container">
-        <p>These potions didn't go so well...</p>
-    </div>
-    <img src="assets/images/magicLesson.jpg" class="colorHarmony">
-    <div id="ingredients-container">
-        <img id="ingredient-1" class="items" src="#">
-        <p id="ingredient-1-name"></p>
-        <img id="ingredient-2" class="items" src="#">
-        <p id="ingredient-2-name"></p>
-        <img id="ingredient-3" class="items" src="#">
-        <p id="ingredient-3-name"></p>
-        <img id="ingredient-4" class="items" src="#">
-        <p id="ingredient-4-name"></p>
-    </div>
-    <img src="assets/images/cauldron.png">
 
+<div class="game-container">
+    
+
+    <div class="witchClassroom">
+        <img src="assets/images/magicLesson.jpg" class="teacherImage">
+        <div class="speech-bubble-ds speech-position">
+            <div id="random-potion">The potion I want is ...</div>
+            <div class="speech-bubble-ds-arrow"></div>
+        </div>
+    </div>
+
+    <div class="instructions-and-score">
+        <p>How to play the game:
+            <ul>
+                <li>Try to add the potion ingredients up to the number of potion.</li>
+                <li>The values of the potion ingredients change each game.</li>
+            </ul>
+        </p>
+        <div id="wins-container">
+            <p>Successful potions...</p>
+        </div>
+        <div id="loss-container">
+            <p>These potions didn't go so well...</p>
+        </div>
+    </div>
+
+    <div id="ingredients-container">
+        <div id="ingredients-sub-container">
+            <div class="item-contained">
+                <img id="ingredient-1" class="items" src="#">
+                <p id="ingredient-1-name" class="fancy-font"></p>
+            </div>
+            <div class="item-contained">
+                <img id="ingredient-2" class="items" src="#">
+                <p id="ingredient-2-name" class="fancy-font"></p>
+            </div>
+            <div class="item-contained">
+                <img id="ingredient-3" class="items title-font" src="#">
+                <p id="ingredient-3-name" class="fancy-font"></p>
+            </div>
+            <div class="item-contained">
+                <img id="ingredient-4" class="items" src="#">
+                <p id="ingredient-4-name" class="fancy-font"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="cauldron-container">
+        <img src="assets/images/cauldron.png" class="cauldronStyled">
+        <p id="current-number-title">Current Score</p>
+        <p id="current-number">0</p>
+    </div>
 </div>
 
 <script
