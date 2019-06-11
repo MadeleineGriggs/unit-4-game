@@ -99,6 +99,22 @@ h1 {
     grid-row-end: 3;
 }
 
+.instructions-and-score p {
+    font-size: 1.5rem;
+    margin-top: 2rem; 
+}
+
+.instructions-and-score ul {
+    margin-top: 1.5rem; 
+}
+
+#score-container {
+    margin-top: 2rem;
+    font-family: 'Raleway', sans-serif;
+    color: #543D33;
+    line-height: 1.2;
+}
+
 /* Styling relating to the 4 ingredients displayed */
 
 #ingredients-container {

@@ -21,6 +21,21 @@ var teacherSays = [
 ]
 
 
+var successText = [
+    "Yay! I can hand in Potion # ",
+    "This one worked! Potion # ",
+    "Alright, I think the teacher will like Potion # ",
+    "I think this is a good example of Potion # "
+]
+
+var lossText = [
+    "Oh no, I ruined Potion # ",
+    "This doesn't look like Potion # ",
+    "I don't think I can hand in Potion # ",
+    "This looks like a funny color, I don't think it's Potion # "
+]    
+
+
 // When the page is loaded.
 $(document).ready(function() {
 
@@ -127,14 +142,25 @@ function shuffle(a) {
         if (currentUserValue > randomPotion) {
             console.log("You lost!");
             potionLost = randomPotion;
-            wins++;
-            $("#loss-container").append("Potion " + potionLost +" has been ruined!");
+            var lossMessage = shuffle(lossText);
+            console.log(lossMessage[0]);
+            losses++;
+            $("#win-loss-message").empty();
+            $("#win-loss-message").append((lossMessage[0]) + potionLost);
+            $("#loss-counter-container").empty();
+            $("#loss-counter-container").append(losses);
+
             startGame();
         } else if (currentUserValue === randomPotion) {
             console.log("You Won!");
             potionWon = randomPotion;
-            losses++;
-            $("#wins-container").append("I can hand in Potion " + potionWon);
+            var wonMessage = shuffle(successText);
+            console.log(wonMessage[0]);
+            wins++;
+            $("#win-loss-message").empty();
+            $("#win-loss-message").append((wonMessage[0]) + potionWon);
+            $("#win-counter-container").empty();
+            $("#win-counter-container").append(wins);
             startGame();
         }
     }
