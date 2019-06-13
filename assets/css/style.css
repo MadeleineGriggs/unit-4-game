@@ -9,6 +9,7 @@ body {
     margin: 1rem 2rem;
     text-align: center;
     background-color: #f9f5f2;
+    border: solid 2px #543D33;
 }
 
 ul {
@@ -138,6 +139,7 @@ h1 {
     overflow: contain;
     margin-top: 1rem;
     text-align: center;
+    margin-left: 4rem;
 }
 
 .cauldronStyled {
@@ -172,7 +174,7 @@ h1 {
 @media (max-width: 575.98px) { ... }
 
 /*  Large devices (desktops, 992px and up) */
-@media (max-width: 1255px) { 
+@media (max-width: 1355px) { 
     .game-container {
         display: flex;
         flex-direction: row;
@@ -246,6 +248,13 @@ h1 {
     .speech-bubble-ds {
         top: 40%;
         left: 35%;
+    }
+
+    #ingredients-container {
+        margin: 0 0.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
  }
 
