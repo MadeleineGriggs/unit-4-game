@@ -15,6 +15,10 @@ ul {
     padding: 0.5rem 1rem;
 }
 
+li {
+    padding-bottom: 0.5rem;
+}
+
 h1 {
     margin-top: 2rem;
     font-family: 'Homemade Apple', cursive;
@@ -107,6 +111,7 @@ h1 {
     font-family: 'Raleway', sans-serif;
     color: #543D33;
     line-height: 1.2;
+    margin-bottom: 1rem;
 }
 
 /* Styling relating to the 4 ingredients displayed */
@@ -166,12 +171,6 @@ h1 {
 /*  Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { ... }
 
-/*  Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) { ... }
-
-/*  Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) { ... }
-
 /*  Large devices (desktops, 992px and up) */
 @media (max-width: 1255px) { 
     .game-container {
@@ -218,3 +217,35 @@ h1 {
     }
 
  }
+
+/*  Medium devices (tablets, 768px and up) */
+@media (max-width: 850px) {
+
+    .speech-bubble-ds {
+        top: 23%;
+        left: 43%;
+    }
+
+}
+
+/*  Small devices (landscape phones, 576px and up) */
+@media(max-width: 715px) { 
+    .witchClassroom {
+        min-width: 100%;
+        height: 18rem;
+        background-image: url("../images/magicLesson.jpg");
+        background-size: cover;
+        filter: grayscale(40%);
+    }
+
+    .instructions-and-score {
+        border-right: none;
+        width: 100%;
+    }
+
+    .speech-bubble-ds {
+        top: 40%;
+        left: 35%;
+    }
+ }
+
