@@ -13,10 +13,10 @@ this is a number guessing game, where you guess the value of the various ingredi
 ## Information about the Theme
 
 ### Colors Used
-- ![#D9202E](https://placehold.it/15/D9202E/000000?text=+) `#b2a9a6 - Medium Mushroom: Used for the main background.`
-- ![#386abb](https://placehold.it/15/386abb/000000?text=+) `#f9f5f2 - Light Cream: Used for the game container background.`
-- ![#1e1e1e](https://placehold.it/15/1e1e1e/000000?text=+) `#543D33 - Dark Mushroom: Used for the text and borders.`
-- ![#f9f9f9](https://placehold.it/15/f9f9f9/000000?text=+) `#F5E5D9 -  Cream: Used for the teacher's speech bubble background.`
+- ![#b2a9a6](https://placehold.it/15/b2a9a6/000000?text=+) `#b2a9a6 - Medium Mushroom: Used for the main background.`
+- ![#f9f5f2](https://placehold.it/15/f9f5f2/000000?text=+) `#f9f5f2 - Light Cream: Used for the game container background.`
+- ![#543D33](https://placehold.it/15/543D33/000000?text=+) `#543D33 - Dark Mushroom: Used for the text and borders.`
+- ![#F5E5D9](https://placehold.it/15/F5E5D9/000000?text=+) `#F5E5D9 -  Cream: Used for the teacher's speech bubble background.`
 
 
 ### Fonts Used
