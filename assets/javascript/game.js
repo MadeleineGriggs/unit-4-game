@@ -20,7 +20,6 @@ var teacherSays = [
     "How about we try making this... "
 ]
 
-
 var successText = [
     "Yay! I can hand in Potion # ",
     "This one worked! Potion # ",

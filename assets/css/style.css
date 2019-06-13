@@ -5,7 +5,7 @@ body {
 .game-container {
     display: grid;
     margin: 1rem 2rem;
-    grid-template-columns: 30vw 20vw auto;
+    grid-template-columns: 30rem 20rem 40rem;
     grid-template-rows: 6rem auto;
     text-align: center;
     background-color: #f9f5f2;
@@ -21,6 +21,7 @@ h1 {
 .fancy-font {
  font-family: 'Homemade Apple', cursive;
  color: #543D33;
+ font-size: 0.75rem;
 }
 
 .body-text {
@@ -28,19 +29,21 @@ h1 {
     color: #543D33;
 }
 
-.items {
-    width: 75px;
-    height: 75px;
-}
-
-
 
 /* Styling relating to the image of the classroom with the teacher */
-
-.teacherImage {
+.witchClassroom {
+    position: relative;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    overflow: hidden;
+    background-image: url("../images/magicLesson.jpg");
+    background-size: cover;
+    height: auto;
     filter: grayscale(40%);
-    max-width: 100%;
 }
+
 
 .speech-bubble-ds {
     background: #F5E5D9;
@@ -53,8 +56,8 @@ h1 {
     max-width: 200px;
     padding: 15px;
     position: absolute;
-    top: 20%;
-    left: 35%;
+    top: 25%;
+    left: 39%;
 }
 
 .speech-bubble-ds-arrow {
@@ -81,13 +84,7 @@ h1 {
     right: 2px;
 }
 
-.witchClassroom {
-    position: relative;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
+
 
 /* Styling relating to the instructions and the score keeping sections */
 
@@ -125,12 +122,21 @@ h1 {
 
 }
 
+
 #ingredients-sub-container {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 4rem;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
 }
 
+.items {
+    width: 100%;
+    height: auto;
+    max-width: 75px;
+    padding-right: 0.5rem;
+}
 
 /* Styling relating to the cauldron where the current user value is displayed */
 
@@ -140,12 +146,15 @@ h1 {
     grid-row-start: 2;
     grid-row-end: 3;
     position: relative;
-    margin-top: 1.5em;
+    margin-top: 1rem;
 }
 
 .cauldronStyled {
     filter: grayscale(40%) hue-rotate(155deg);
-    max-width: 43%;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-width: 350px;
 }
 
 #current-number {
@@ -166,3 +175,23 @@ h1 {
     font-size: 1.5rem;
     color: white;
 }
+
+
+/*  Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { ... }
+
+/*  Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { ... }
+
+/*  Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { ... }
+
+/*  Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+    
+
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { ... }
