@@ -80,28 +80,28 @@ function shuffle(a) {
         $("#ingredient-1").empty();
         $("#ingredient-1").attr("src", item1Img);
         $("#ingredient-1-name").empty();
-        $("#ingredient-1-name").html(item1Name + " " + item1Value);
+        $("#ingredient-1-name").html(item1Name);
         //Generate a random potion ingredient 2
         var item2Index = 1;
         item2Value = Math.floor((Math.random() * 25) + 1);
         var item2Img = "./assets/images/ingredientImages/" + ingredients[item2Index]["img"];
         var item2Name = ingredients[item2Index]["name"];
         $("#ingredient-2").attr("src", item2Img);
-        $("#ingredient-2-name").html(item2Name + " " + item2Value);
+        $("#ingredient-2-name").html(item2Name);
         //Generate a random potion ingredient 3
         var item3Index = 2;
         item3Value = Math.floor((Math.random() * 25) + 1);
         var item3Img = "./assets/images/ingredientImages/" + ingredients[item3Index]["img"];
         var item3Name = ingredients[item3Index]["name"];
         $("#ingredient-3").attr("src", item3Img);
-        $("#ingredient-3-name").html(item3Name + " " + item3Value);
+        $("#ingredient-3-name").html(item3Name);
         //Generate a random potion ingredient 4
         var item4Index = 3;
         item4Value = Math.floor((Math.random() * 25) + 1);
         var item4Img = "./assets/images/ingredientImages/" + ingredients[item4Index]["img"];
         var item4Name = ingredients[item4Index]["name"];
         $("#ingredient-4").attr("src", item4Img);
-        $("#ingredient-4-name").html(item4Name + " " + item4Value);
+        $("#ingredient-4-name").html(item4Name);
 
     };
 

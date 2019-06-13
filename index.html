@@ -25,8 +25,10 @@
     <div class="instructions-and-score">
         <p class="fancy-font">How to play the game:
             <ul class="body-text">
-                <li>Try to add the potion ingredients up to the number of potion.</li>
+                <li>Add ingredients to the cauldron to add more numbers to your current score.</li>
                 <li>The values of the potion ingredients change each game.</li>
+                <li>Try to get the current score to match the potion number the teacher wants.</li>
+                <li>If you go over the current score, you lose and the game resets.</li>
             </ul>
         </p>
         <div id="score-container">
@@ -42,9 +44,8 @@
             </div>
         </div>
         </div>
-
+        <br>
     <div id="ingredients-container">
-        <div id="ingredients-sub-container">
             <div class="item-contained">
                 <img id="ingredient-1" class="items" src="#">
                 <p id="ingredient-1-name" class="fancy-font"></p>
@@ -61,13 +62,14 @@
                 <img id="ingredient-4" class="items" src="#">
                 <p id="ingredient-4-name" class="fancy-font"></p>
             </div>
-        </div>
-    </div>
 
+    </div>
+<br>
     <div id="cauldron-container">
+            <p id="current-number-title" class="body-text">Current Score</p>
+            <br>
+            <p id="current-number">0</p>
         <img src="assets/images/cauldron.png" class="cauldronStyled">
-        <p id="current-number-title" class="body-text">Current Score</p>
-        <p id="current-number">0</p>
     </div>
 </div>
 

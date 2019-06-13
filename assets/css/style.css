@@ -3,12 +3,16 @@ body {
 }
 
 .game-container {
-    display: grid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin: 1rem 2rem;
-    grid-template-columns: 30rem 20rem 40rem;
-    grid-template-rows: 6rem auto;
     text-align: center;
     background-color: #f9f5f2;
+}
+
+ul {
+    padding: 0.5rem 1rem;
 }
 
 h1 {
@@ -31,13 +35,9 @@ h1 {
 
 
 /* Styling relating to the image of the classroom with the teacher */
+
 .witchClassroom {
-    position: relative;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    overflow: hidden;
+    width: 30vw;
     background-image: url("../images/magicLesson.jpg");
     background-size: cover;
     height: auto;
@@ -89,11 +89,8 @@ h1 {
 /* Styling relating to the instructions and the score keeping sections */
 
 .instructions-and-score {
-    border-right: 1px solid black;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
+    border-right: 1px solid #543D33;
+    width: 25vw;
 }
 
 .instructions-and-score p {
@@ -115,21 +112,13 @@ h1 {
 /* Styling relating to the 4 ingredients displayed */
 
 #ingredients-container {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-
-}
-
-
-#ingredients-sub-container {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 4rem;
-    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     margin-left: 0.5rem;
+    margin-right: 1rem;
 }
+
 
 .items {
     width: 100%;
@@ -141,39 +130,36 @@ h1 {
 /* Styling relating to the cauldron where the current user value is displayed */
 
 #cauldron-container {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    position: relative;
+    overflow: contain;
     margin-top: 1rem;
+    text-align: center;
 }
 
 .cauldronStyled {
+    display: block;
+    margin: 0 auto;
     filter: grayscale(40%) hue-rotate(155deg);
     width: 100%;
     height: auto;
     object-fit: contain;
-    max-width: 350px;
+    max-width: 300px;
 }
 
 #current-number {
+    display: inline-block;
     z-index: 2;
-    position: absolute;
-    left: 47%;
-    top: 65%;
     font-family: 'Homemade Apple', cursive;
     font-size: 3rem;
-    color: white;
+    text-align: center;
+    color: #543D33;
 }
 
 #current-number-title {
+    display: inline-block;
     z-index: 2;
-    position: absolute;
-    left: 38%;
-    top: 57%;
+    text-align: center;
     font-size: 1.5rem;
-    color: white;
+    color: #543D33;
 }
 
 
@@ -187,11 +173,48 @@ h1 {
 @media (min-width: 768px) and (max-width: 991.98px) { ... }
 
 /*  Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
+@media (max-width: 1255px) { 
+    .game-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 1rem 2rem;
+        text-align: center;
+        background-color: #f9f5f2;
+        align-content: stretch;
+    }
 
-    
+    .game-container > br {
+        width: 100%;
+        content: '';
+        }
+
+    .witchClassroom {
+        min-width: 50%;
+        background-image: url("../images/magicLesson.jpg");
+        background-size: cover;
+        filter: grayscale(40%);
+
+    }
+
+    .instructions-and-score {
+        border-right: none;
+        width: 50%;
+    }
+
+    #ingredients-container {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .items {
+        padding: 1rem 2rem;
+    }
+
+    #cauldron-container {
+    margin: 1rem auto;
+    }
 
  }
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { ... }
