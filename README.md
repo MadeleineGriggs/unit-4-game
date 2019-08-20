@@ -1,7 +1,7 @@
 # unit-4-game - Potion Mixer
 A game where you try to fill your cauldron with ingredients to match the value of potion the teacher wants.
 
-[Play the Game Here!](https://typicu.github.io/unit-4-game/index.html)
+[Play the Game Here!](https://madeleinegriggs.github.io/unit-4-game/index.html)
 
 ## Author
 Madeleine Griggs.
